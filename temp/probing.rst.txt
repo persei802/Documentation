@@ -1,0 +1,31 @@
+=======
+PROBING
+=======
+The probe screen has been through basic testing but there could still be some minor bugs. 
+When running probing routines, use extreme caution until you are familiar with how everything works. 
+Probe routines run without blocking the main GUI. This gives the operator the opportunity to watch the DROs and stop the routine at any time.
+
+.. note:: Probing is very unforgiving to mistakes; be sure to check settings before using.
+
+There are 2 probe interfaces available - VersaProbe and BasicProbe. 
+The only keywords accepted are “versaprobe” and “basicprobe” (no quote marks). 
+Any other, or none at all, will start the GUI with no probing page.
+The user can specify which one to use in the INI file. For example:
+
+.. code-block:: python
+
+  [PROBE]
+  USE_PROBE = versaprobe
+  
+.. image:: images/versaprobe.png
+  :width: 800
+  :alt: Probe page showing VersaProbe
+
+.. code-block:: python
+
+  [PROBE]
+  USE_PROBE = basicprobe
+
+.. image:: images/basicprobe.png
+  :width: 800
+  :alt: Probe page showing BasicProbe

@@ -1,0 +1,7 @@
+=============
+CUSTOMIZATION
+=============
+All aspects of the GUI are fully customizable through qtdesigner. 
+This is included with the qtvcp development environment. 
+The extensive use of qtvcp widgets keeps the amount of required python code to a minimum, allowing relatively easy modifications. 
+The LinuxCNC website has extensive documentation on the installation and use of qtvcp libraries. 

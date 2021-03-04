@@ -1,0 +1,65 @@
+========
+HAL PINS
+========
+
+These pins are specific to the QtDragon screen, There are of course many more HAL pins
+that must be connected for linuxcnc to function.
+
+If you need a manual tool change prompt, add these lines in your postgui file.
+
+.. code-block:: python
+
+  net tool-change      hal_manualtoolchange.change   <=  iocontrol.0.tool-change
+  net tool-changed     hal_manualtoolchange.changed  <=  iocontrol.0.tool-changed
+  net tool-prep-number hal_manualtoolchange.number   <=  iocontrol.0.tool-prep-number
+
+This input pin should be connected to indicate probe state:
+
+.. code-block:: python
+
+  qtdragon.led_probe
+
+This input pin should be connected to indicate if motion was limited due to external offsets:
+
+.. code-block:: python
+
+  qtdragon.led_limit
+
+These pins can be connected to indicate home switch states:
+
+.. code-block:: python
+
+  qtdragon.led_home_x
+  qtdragon.led_home_y
+  qtdragon.led_home_z
+
+These pins are inputs related to spindle VFD indicating:
+
+.. code-block:: python
+
+  qtdragon.modbus-errors
+  qtdragon.spindle_amps
+  qtdragon.spindle_fault
+  qtdragon.spindle_volts
+
+This pin is an output to the spindle control to pause it:
+
+.. code-block:: python
+
+  qtdragon.spindle_pause
+
+This output pins can be connected to turn on a laser:
+
+.. code-block:: python
+
+  qtdragon.btn_laser_on
+
+These pins are related to external offsets if they are used:
+
+.. code-block:: python
+
+  qtdragon.eoffset_clear
+  qtdragon.eoffset_count
+  qtdragon.eoffset_enable
+  qtdragon.eoffset_value
+

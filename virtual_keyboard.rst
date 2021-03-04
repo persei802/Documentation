@@ -1,0 +1,18 @@
+================
+VIRTUAL KEYBOARD
+================
+QtDragon includes a virtual keyboard for use with touchscreens.
+To enable the keyboard, check the Use Virtual Keyboard checkbox in the Settings page.
+Clicking on any input field, such as probe parameters or tool table entries, will show the keyboard.
+The keyboard will be hidden when one of the following occurs:
+
+- clicking the MAIN page button
+- disabling the keyboard in the SETTINGS page
+
+.. note:: Keyboard jogging is disabled when using the virtual keyboard.
+
+.. figure:: images/virtual_keyboard.png
+  :width: 800
+  :alt: Virtual Keyboard
+
+  Virtual Keyboard
